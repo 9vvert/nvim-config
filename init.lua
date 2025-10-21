@@ -6,4 +6,3 @@ require("user.lazy")
 require("user.eviline")
 
 vim.cmd("colorscheme cyberdream")
-

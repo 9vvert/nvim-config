@@ -32,13 +32,30 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- Custom keybinds
+-- Move quickly
 vim.keymap.set("n", "<M-h>", "5h", { desc = "Move left quickly" })
 vim.keymap.set("n", "<M-l>", "5l", { desc = "Move right quickly" })
 vim.keymap.set("n", "<M-j>", "5j", { desc = "Move lower quickly" })
 vim.keymap.set("n", "<M-k>", "5k", { desc = "Move upper quickly" })
 vim.keymap.set("n", "<M-e>", "5<C-e>", { desc = "Move screen down quickly" })
 vim.keymap.set("n", "<M-y>", "5<C-y>", { desc = "Move screen up quickly" })
+vim.keymap.set("n", "<M-n>", function()
+    local len = #vim.fn.getline(".")
+    local row, _ = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_win_set_cursor(0, { row, math.floor(len / 2) })
+end, { desc = "Move to line center" })
+
+vim.keymap.set("n", "<M-b>", function()
+    local len = #vim.fn.getline(".")
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_win_set_cursor(0, { row, math.floor(col / 2) })
+end, { desc = "Move to left half" })
+
+vim.keymap.set("n", "<M-m>", function()
+    local len = #vim.fn.getline(".")
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_win_set_cursor(0, { row, math.floor((col + len) / 2) })
+end, { desc = "Move to right half" })
 
 -- use emacs keybinds in insert mode
 vim.keymap.set("i", "<C-f>", "<right>", { desc = "Move forward" })

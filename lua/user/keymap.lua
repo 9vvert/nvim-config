@@ -39,29 +39,18 @@ vim.keymap.set("n", "<M-j>", "5j", { desc = "Move lower quickly" })
 vim.keymap.set("n", "<M-k>", "5k", { desc = "Move upper quickly" })
 vim.keymap.set("n", "<M-e>", "5<C-e>", { desc = "Move screen down quickly" })
 vim.keymap.set("n", "<M-y>", "5<C-y>", { desc = "Move screen up quickly" })
-vim.keymap.set("n", "<M-n>", function()
+vim.keymap.set("n", "<M-m>", function()
     local len = #vim.fn.getline(".")
     local row, _ = unpack(vim.api.nvim_win_get_cursor(0))
     vim.api.nvim_win_set_cursor(0, { row, math.floor(len / 2) })
 end, { desc = "Move to line center" })
-
-vim.keymap.set("n", "<M-b>", function()
-    local len = #vim.fn.getline(".")
-    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
-    vim.api.nvim_win_set_cursor(0, { row, math.floor(col / 2) })
-end, { desc = "Move to left half" })
-
-vim.keymap.set("n", "<M-m>", function()
-    local len = #vim.fn.getline(".")
-    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
-    vim.api.nvim_win_set_cursor(0, { row, math.floor((col + len) / 2) })
-end, { desc = "Move to right half" })
 
 -- use emacs keybinds in insert mode
 vim.keymap.set("i", "<C-f>", "<right>", { desc = "Move forward" })
 vim.keymap.set("i", "<C-b>", "<left>", { desc = "Move backward" })
 vim.keymap.set("i", "<C-e>", "<end>", { desc = "Move to end" })
 vim.keymap.set("i", "<C-a>", "<home>", { desc = "Move to begin" })
+vim.keymap.set("i", "<C-d>", "<del>", { desc = "Delete a character" })
 
 -- smart split keymappings
 -- vim.keymap.set('n', '<leader>wh', require('smart-splits').resize_left)
@@ -96,7 +85,7 @@ vim.keymap.set("n", "<M-.>", "<cmd>BufferNext<CR>", { desc = "Move to next buffe
 vim.keymap.set("n", "<M-<>", "<cmd>BufferMovePrevious<CR>", { desc = "Swap with previous buffer" })
 vim.keymap.set("n", "<M->>", "<cmd>BufferMoveNext<CR>", { desc = "Swap with next buffer" })
 -- close/restore buffer
-vim.keymap.set("n", "<M-c>", "<cmd>BufferClose<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<M-/>", "<cmd>BufferClose<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<M-s-c>", "<cmd>BufferRestore<CR>", { desc = "Restore buffer" })
 -- magic buffer mode
 vim.keymap.set("n", "<leader>bs", "<cmd>BufferPick<CR>", { desc = "Select buffer in magic mode" })

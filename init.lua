@@ -3,6 +3,6 @@ require("user.keymap")
 require("user.autocmd")
 require("user.lazy")
 
-require("user.eviline")
+-- require("user.eviline")
 
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme eldritch")

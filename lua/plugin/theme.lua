@@ -23,7 +23,12 @@ return {
     {
         "scottmckendry/cyberdream.nvim",
         lazy = false,
+    },
+    { "EdenEast/nightfox.nvim" },
+    {
+        "eldritch-theme/eldritch.nvim",
+        lazy = false,
         priority = 1000,
+        opts = {},
     },
 }
-

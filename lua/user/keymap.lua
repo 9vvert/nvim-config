@@ -104,4 +104,5 @@ vim.keymap.set("n", "<M-9>", "<cmd>BufferGoto 9<CR>", { desc = "Goto buffer 9" }
 
 vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
 
-vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
+-- toggle hilight
+vim.keymap.set("n", "<C-l>", "<cmd>set hlsearch!<CR>")

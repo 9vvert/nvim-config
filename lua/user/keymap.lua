@@ -103,3 +103,5 @@ vim.keymap.set("n", "<M-8>", "<cmd>BufferGoto 8<CR>", { desc = "Goto buffer 8" }
 vim.keymap.set("n", "<M-9>", "<cmd>BufferGoto 9<CR>", { desc = "Goto buffer 9" })
 
 vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
+
+vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")

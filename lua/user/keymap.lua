@@ -39,11 +39,6 @@ vim.keymap.set("n", "<M-j>", "5j", { desc = "Move lower quickly" })
 vim.keymap.set("n", "<M-k>", "5k", { desc = "Move upper quickly" })
 vim.keymap.set("n", "<M-e>", "5<C-e>", { desc = "Move screen down quickly" })
 vim.keymap.set("n", "<M-y>", "5<C-y>", { desc = "Move screen up quickly" })
-vim.keymap.set("n", "<M-m>", function()
-    local len = #vim.fn.getline(".")
-    local row, _ = unpack(vim.api.nvim_win_get_cursor(0))
-    vim.api.nvim_win_set_cursor(0, { row, math.floor(len / 2) })
-end, { desc = "Move to line center" })
 
 -- use emacs keybinds in insert mode
 vim.keymap.set("i", "<C-f>", "<right>", { desc = "Move forward" })
@@ -106,3 +101,5 @@ vim.keymap.set("n", "<M-6>", "<cmd>BufferGoto 6<CR>", { desc = "Goto buffer 6" }
 vim.keymap.set("n", "<M-7>", "<cmd>BufferGoto 7<CR>", { desc = "Goto buffer 7" })
 vim.keymap.set("n", "<M-8>", "<cmd>BufferGoto 8<CR>", { desc = "Goto buffer 8" })
 vim.keymap.set("n", "<M-9>", "<cmd>BufferGoto 9<CR>", { desc = "Goto buffer 9" })
+
+vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })

@@ -11,3 +11,18 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.hl.on_yank()
     end,
 })
+-- reset diagnostic color after changing scheme
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function()
+        local colors = {
+            Error = "#ff5555",
+            Warn = "#ffaa00",
+            Info = "#00aaff",
+            Hint = "#aaaaaa",
+        }
+
+        for type, color in pairs(colors) do
+            vim.api.nvim_set_hl(0, "DiagnosticUnderline" .. type, { undercurl = true, sp = color })
+        end
+    end,
+})

@@ -27,10 +27,10 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("n", "<leader>cv", "<cmd>vsplit<CR>", { desc = "Split window vertically" })
 vim.keymap.set("n", "<leader>ch", "<cmd>split<CR>", { desc = "Split window horizonally" })
 
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- Move quickly
 vim.keymap.set("n", "<M-h>", "5h", { desc = "Move left quickly" })
@@ -102,7 +102,7 @@ vim.keymap.set("n", "<M-7>", "<cmd>BufferGoto 7<CR>", { desc = "Goto buffer 7" }
 vim.keymap.set("n", "<M-8>", "<cmd>BufferGoto 8<CR>", { desc = "Goto buffer 8" })
 vim.keymap.set("n", "<M-9>", "<cmd>BufferGoto 9<CR>", { desc = "Goto buffer 9" })
 
-vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
+-- vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
 
 -- toggle hilight
-vim.keymap.set("n", "<C-l>", "<cmd>set hlsearch!<CR>")
+-- vim.keymap.set("n", "<C->", "<cmd>set hlsearch!<CR>")

@@ -9,7 +9,7 @@ return {
         },
         lazy = false, -- neo-tree will lazily load itself
         keys = {
-            vim.keymap.set("n", "<M-r>", ":Neotree toggle<Enter>", { desc = "file explorer" }),
+            vim.keymap.set("n", "<M-r>", "<cmd>Neotree toggle<Enter>", { desc = "file explorer" }),
             vim.keymap.set("n", "<M-R>", ":Neotree ", { desc = "file explorer" }),
         },
     },

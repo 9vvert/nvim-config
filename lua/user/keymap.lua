@@ -48,7 +48,7 @@ vim.keymap.set("i", "<C-a>", "<home>", { desc = "Move to begin" })
 vim.keymap.set("i", "<C-d>", "<del>", { desc = "Delete a character" })
 
 -- smart split keymappings
--- vim.keymap.set('n', '<leader>wh', require('smart-splits').resize_left)
+-- vim.keymap.set("n", "<leader>wh", require("smart-splits").resize_left)
 
 -- bracket and indent
 vim.opt.tabstop = 4
@@ -102,7 +102,7 @@ vim.keymap.set("n", "<M-7>", "<cmd>BufferGoto 7<CR>", { desc = "Goto buffer 7" }
 vim.keymap.set("n", "<M-8>", "<cmd>BufferGoto 8<CR>", { desc = "Goto buffer 8" })
 vim.keymap.set("n", "<M-9>", "<cmd>BufferGoto 9<CR>", { desc = "Goto buffer 9" })
 
--- vim.keymap.set("n", "<M-m>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
+vim.keymap.set("n", "<M-q>", "<Plug>MarkdownPreviewToggle", { desc = "preview markdown in webpage" })
 
 -- toggle hilight
--- vim.keymap.set("n", "<C->", "<cmd>set hlsearch!<CR>")
+vim.keymap.set("n", "<M-m>", "<cmd>set hlsearch!<CR>", { desc = "toggle hilight" })

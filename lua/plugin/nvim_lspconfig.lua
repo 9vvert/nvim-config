@@ -225,6 +225,8 @@ return {
             asm_lsp = {},
             awk_ls = {},
 
+            hls = {},
+
             lua_ls = {
                 -- cmd = { ... },
                 -- filetypes = { ... },

@@ -33,10 +33,10 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window"
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- Move quickly
-vim.keymap.set("n", "<M-h>", "5h", { desc = "Move left quickly" })
-vim.keymap.set("n", "<M-l>", "5l", { desc = "Move right quickly" })
-vim.keymap.set("n", "<M-j>", "5j", { desc = "Move lower quickly" })
-vim.keymap.set("n", "<M-k>", "5k", { desc = "Move upper quickly" })
+vim.keymap.set({ "n", "v" }, "<M-h>", "5h", { desc = "Move left quickly" })
+vim.keymap.set({ "n", "v" }, "<M-l>", "5l", { desc = "Move right quickly" })
+vim.keymap.set({ "n", "v" }, "<M-j>", "5j", { desc = "Move lower quickly" })
+vim.keymap.set({ "n", "v" }, "<M-k>", "5k", { desc = "Move upper quickly" })
 vim.keymap.set("n", "<M-e>", "5<C-e>", { desc = "Move screen down quickly" })
 vim.keymap.set("n", "<M-y>", "5<C-y>", { desc = "Move screen up quickly" })
 

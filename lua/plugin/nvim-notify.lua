@@ -1,7 +1,7 @@
 return {
     "rcarriga/nvim-notify",
     keys = {
-        vim.keymap.set("n", "<leader>sn", "<cmd>Telescope notify<Enter>", { desc = "[S]earch [N]otifications" }),
+        vim.keymap.set("n", "<leader>si", "<cmd>Telescope notify<Enter>", { desc = "[S]earch [N]otifications" }),
     },
     config = function()
         ---@diagnostic disable-next-line: missing-fields

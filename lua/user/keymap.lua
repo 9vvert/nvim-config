@@ -106,3 +106,6 @@ vim.keymap.set("n", "<M-q>", "<Plug>MarkdownPreviewToggle", { desc = "preview ma
 
 -- toggle hilight
 vim.keymap.set("n", "<M-m>", "<cmd>set hlsearch!<CR>", { desc = "toggle hilight" })
+
+-- terminal mode
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, desc = "toggle hilight" })

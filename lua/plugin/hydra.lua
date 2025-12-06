@@ -5,6 +5,39 @@ return {
         local Hydra = require("hydra")
         Hydra({
             -- string? only used in auto-generated hint
+            name = "DIAGNOSTIC",
+
+            -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+            mode = "n",
+
+            -- string? key required to activate the hydra, when excluded, you can use
+            -- Hydra:activate()
+            body = "<leader>d",
+
+            heads = {
+                {
+                    "o",
+                    function()
+                        vim.diagnostic.open_float()
+                    end,
+                    { noremap = true, silent = true },
+                },
+                {
+                    "p",
+                    function()
+                        vim.diagnostic.goto_prev()
+                    end,
+                },
+                {
+                    "n",
+                    function()
+                        vim.diagnostic.goto_next()
+                    end,
+                },
+            },
+        })
+        Hydra({
+            -- string? only used in auto-generated hint
             name = "RESIZE",
 
             -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
@@ -20,6 +53,7 @@ return {
                 { "j", "5<C-w>-" },
                 { "k", "5<C-w>+" },
             },
+
             -- -- these are explained below
             -- config = {
             --     -- see :h hydra-heads

@@ -37,6 +37,8 @@ require("tiny-inline-diagnostic").setup({
     },
 
     options = {
+        -- change the diagnostic window to focusable
+        focusable = true,
         -- Display the source of the diagnostic (e.g., basedpyright, vsserver, lua_ls etc.)
         show_source = {
             enabled = false,

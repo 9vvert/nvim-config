@@ -82,6 +82,7 @@ return {
 
             config = {
                 color = "teal",
+                exit = false,
             },
 
             -- -- these are explained below

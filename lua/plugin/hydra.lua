@@ -4,6 +4,27 @@ return {
         -- create hydras in here
         local Hydra = require("hydra")
         Hydra({
+            name = "LSP",
+
+            -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+            mode = "n",
+
+            -- string? key required to activate the hydra, when excluded, you can use
+            -- Hydra:activate()
+            --
+            body = "<leader>l",
+
+            heads = {
+                { "ff", "<cmd>Lspsaga finder<CR>", { noremap = true, silent = true } },
+                { "fi", "<cmd>Lspsaga finder imp<CR>" },
+            },
+
+            config = {
+                color = "red",
+            },
+        })
+
+        Hydra({
             -- string? only used in auto-generated hint
             name = "DIAGNOSTIC",
 
@@ -12,6 +33,7 @@ return {
 
             -- string? key required to activate the hydra, when excluded, you can use
             -- Hydra:activate()
+            --
             body = "<leader>d",
 
             heads = {
@@ -35,6 +57,10 @@ return {
                     end,
                 },
             },
+
+            config = {
+                color = "red",
+            },
         })
         Hydra({
             -- string? only used in auto-generated hint
@@ -52,6 +78,10 @@ return {
                 { "l", "5<C-w>>" },
                 { "j", "5<C-w>-" },
                 { "k", "5<C-w>+" },
+            },
+
+            config = {
+                color = "teal",
             },
 
             -- -- these are explained below

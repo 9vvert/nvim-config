@@ -12,9 +12,9 @@ return {
                 local is_neotree_open = require("neo-tree.sources.manager").get_state("filesystem").winid
 
                 if is_neotree_open then
-                    vim.cmd("Neotree toggle")
+                    vim.cmd("Neotree show toggle")
                     vim.cmd("bdelete")
-                    vim.cmd("Neotree toggle")
+                    vim.cmd("Neotree show toggle")
                 else
                     vim.cmd("bdelete")
                 end

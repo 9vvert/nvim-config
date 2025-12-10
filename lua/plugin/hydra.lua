@@ -3,6 +3,28 @@ return {
     config = function()
         -- create hydras in here
         local Hydra = require("hydra")
+
+        Hydra({
+            name = "MARKDOWN",
+
+            -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+            mode = "n",
+
+            -- string? key required to activate the hydra, when excluded, you can use
+            -- Hydra:activate()
+            --
+            body = "<leader>q",
+
+            heads = {
+                -- preview in web browser
+                { "w", "<Plug>MarkdownPreviewToggle", { noremap = true, silent = true } },
+            },
+
+            config = {
+                color = "red",
+            },
+        })
+
         Hydra({
             name = "LSP",
 

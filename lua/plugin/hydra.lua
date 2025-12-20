@@ -25,26 +25,26 @@ return {
             },
         })
 
-        Hydra({
-            name = "LSP",
-
-            -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
-            mode = "n",
-
-            -- string? key required to activate the hydra, when excluded, you can use
-            -- Hydra:activate()
-            --
-            body = "<leader>l",
-
-            heads = {
-                { "ff", "<cmd>Lspsaga finder<CR>", { noremap = true, silent = true } },
-                { "fi", "<cmd>Lspsaga finder imp<CR>" },
-            },
-
-            config = {
-                color = "red",
-            },
-        })
+        -- Hydra({
+        --     name = "LSP",
+        --
+        --     -- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+        --     mode = "n",
+        --
+        --     -- string? key required to activate the hydra, when excluded, you can use
+        --     -- Hydra:activate()
+        --     --
+        --     body = "<leader>l",
+        --
+        --     heads = {
+        --         { "ff", "<cmd>Lspsaga finder<CR>", { noremap = true, silent = true } },
+        --         { "fi", "<cmd>Lspsaga finder imp<CR>" },
+        --     },
+        --
+        --     config = {
+        --         color = "red",
+        --     },
+        -- })
 
         Hydra({
             -- string? only used in auto-generated hint

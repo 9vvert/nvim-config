@@ -9,12 +9,12 @@ return {
             desc = "Open Trouble Pannels",
         },
         {
-            "<leader>xd",
+            "<leader>xD",
             "<cmd>Trouble diagnostics toggle<cr>",
             desc = "Diagnostics (Trouble)",
         },
         {
-            "<leader>xD",
+            "<leader>xd",
             "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
             desc = "Buffer Diagnostics (Trouble)",
         },

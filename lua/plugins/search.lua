@@ -95,7 +95,7 @@ return {
             vim.keymap.set("n", "<leader>ltd", builtin.lsp_type_definitions, { desc = "[L]ist [T]ype [D]efinition" })
 
             -- Slightly advanced example of overriding default behavior and theme
-            vim.keymap.set("n", "<leader>/", function()
+            vim.keymap.set("n", "<leader>sb", function()
                 -- You can pass additional configuration to Telescope to change the theme, layout, etc.
                 builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
                     winblend = 10,

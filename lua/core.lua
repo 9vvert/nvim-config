@@ -22,7 +22,7 @@ vim.opt.relativenumber = true
 
 -- vim.o.statuscolumn = '%l%=%s%=%r%s'
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.o.mouse = "a"
+-- vim.o.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
@@ -32,7 +32,7 @@ vim.o.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+    vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent

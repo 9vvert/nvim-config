@@ -85,3 +85,5 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.o.mouse = ""
+
+vim.o.whichwrap = "b,s"

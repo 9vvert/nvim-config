@@ -15,6 +15,13 @@ map({ "n", "v" }, "<M-j>", "5j")
 map({ "n", "v" }, "<M-k>", "5k")
 map({ "n", "v" }, "<M-l>", "5l")
 
+-- Ignore mouse clicks so focus/cursor stays put; scroll/resize still works with mouse=a
+map({ "", "i", "c" }, "<LeftMouse>", "<Nop>")
+map({ "", "i", "c" }, "<LeftRelease>", "<Nop>")
+map({ "", "i", "c" }, "<2-LeftMouse>", "<Nop>")
+map({ "", "i", "c" }, "<RightMouse>", "<Nop>")
+map({ "", "i", "c" }, "<MiddleMouse>", "<Nop>")
+
 -- tabufline
 nomap("n", "<Tab>")
 nomap("n", "<S-Tab>")

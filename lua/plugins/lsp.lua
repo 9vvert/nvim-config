@@ -226,6 +226,7 @@ return {
                 yamlls = {},
                 asm_lsp = {},
                 awk_ls = {},
+                ocamllsp = {},
 
                 hls = {},
 
@@ -262,10 +263,10 @@ return {
             vim.list_extend(ensure_installed, {
                 "stylua", -- Used to format Lua code
             })
-            require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+            -- require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
             require("mason-lspconfig").setup {
-                ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+                ensure_installed = ensure_installed, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
                 automatic_installation = false,
                 handlers = {
                     function(server_name)
@@ -572,7 +573,9 @@ return {
                 WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
                 PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
                 NOTE = { icon = " ", color = "hint", alt = {} },
-                INFO = { icon = " ", color = "info", alt = { "SOME" } },
+                INFO = { icon = " ", color = "info", alt = { "SOME", "TIP" } },
+                TIP = { icon = " ", color = "tip", alt = {} },
+                DEBUG = { icon = "⏲ ", color = "debug", alt = {} },
                 TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
             },
             gui_style = {
@@ -605,7 +608,9 @@ return {
                 info = { "#2563EB" },
                 hint = { "#10B981" },
                 default = { "#7C3AED" },
+                debug = { "#5C3AED" },
                 test = { "#FF00FF" },
+                tip = { "#7d888a" },
             },
             search = {
                 command = "rg",
@@ -624,7 +629,6 @@ return {
         },
 
         keys = {
-
             "<leader>st",
             "<cmd>TodoTelescope<CR>",
             mode = "n",

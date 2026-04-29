@@ -95,5 +95,26 @@ return {
         { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
     },
-    ---------------------- jump ---------------------
+    ---------------------- completion ---------------------
+    {
+        "saghen/blink.cmp",
+        event = "InsertEnter",
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+        },
+        version = "*",
+        opts = {
+            keymap = {
+                preset = "default",
+            },
+            sources = {
+                default = { "lsp", "path", "snippets", "buffer" },
+                -- add code-companion as a source to use completion in that window
+                per_filetype = {
+                    codecompanion = { "codecompanion" },
+                },
+            },
+        },
+        opts_extend = { "sources.default" },
+    },
 }
